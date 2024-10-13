@@ -4,7 +4,7 @@
 CIPHER="-aes-128-ecb" # -aes-128-cfb, bf-cbc
 KEY="c705fe21632c4031808148d9bbe069f9"
 IV="" # not used for this cipher
-SALT="0000000000000000" # not used for this cipher
+SALT="" # not used for this cipher
 P_FILE="plaintext.txt"
 E_FILE="ciphertext.enc"
 D_FILE="decrypted.txt"

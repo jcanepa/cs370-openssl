@@ -1,12 +1,12 @@
 #! /usr/bin/env bash
 
 # Define variables
-CIPHER="-aes-128-ecb"
-KEY="6FAE6A22F99127D79B21D7A0F1949D14"
-IV=""
-SALT="1C578762DA631007"
+CIPHER="-bf-cbc"
+KEY="AACEA9897DE38A386F744C35451CED29"
+IV="57FE234E6033869E"
+SALT="67C4437621DEDAC1"
 PASS=""
-E_FILE="aes-128-ecb.enc"
+E_FILE="encryption-protocols/ciphertext_bf/ciphertext_bf-cbc.enc"
 D_FILE="decrypted.txt"
 
 # decrypt the ciphertext file

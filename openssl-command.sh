@@ -2,13 +2,13 @@
 
 # Define variables
 CIPHER="-bf-ecb" # -aes-128-cfb, bf-cbc
-KEY="c705fe21632c4031808148d9bbe069f9"
-IV="" # not used for this cipher
-SALT="" # not used for this cipher
-P_FILE="plaintext.txt"
+KEY="a3a02c24f886d7a6dba8633cb9fd08c2"
+IV="15d82a74fe05c7919368040e5c6c27fc"
+SALT="1d0f212b0d021b4b8e30ddcd5fc3d3a1"
+PASS="sT8k"
+P_FILE=""
 E_FILE="newer_bf_ecb.enc"
 D_FILE="decrypted.txt"
-
 
 # display the plaintext message
 # cat $P_FILE
@@ -23,10 +23,10 @@ D_FILE="decrypted.txt"
 # xxd -ps $E_FILE
 
 # decrypt the ciphertext file
-openssl enc $CIPHER -d -in $E_FILE -out $D_FILE -K $KEY ${IV:+-iv $IV} ${SALT:+-S $SALT}
+openssl enc $CIPHER -d -in $E_FILE -out $D_FILE -K $KEY ${IV:+-iv $IV} ${SALT:+-S $SALT} ${PASS:+-pass pass:$PASS}
 
 # display the decrypted file
-cat ./$D_FILE
+# cat ./$D_FILE
 
 # clean up
 # rm ./$E_FILE

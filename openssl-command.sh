@@ -29,5 +29,5 @@ openssl enc $CIPHER -d -in $E_FILE -out $D_FILE -K $KEY ${IV:+-iv $IV} ${SALT:+-
 cat ./$D_FILE
 
 # clean up
-rm ./$E_FILE
-rm ./$D_FILE
+# rm ./$E_FILE
+# rm ./$D_FILE

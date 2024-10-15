@@ -1,0 +1,2 @@
+openssl enc -e -des-ecb -in mw.jpg -out des-ecb.enc -pass pass:liberty -pbkdf2 -K 03601D99A678A018 -provider legacy -provider default -p
+openssl enc -d -des-ecb -in des-ecb.enc -out decrypted.jpg -pass pass:liberty -pbkdf2 -K 03601D99A678A018 -provider legacy -provider default

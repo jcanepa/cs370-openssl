@@ -9,7 +9,6 @@ CMD_OPTIONS="-provider legacy -provider default"
 
 # encrypt the file
 openssl enc $CIPHER -salt -in $P_FILE -out encrypted${CIPHER}.enc -pass pass:${PASSWORD} -pbkdf2 -provider legacy -provider default
-
 # manually extract the key & iv, then spill all secrets
 openssl enc -cast5-ofb -salt -in $P_FILE -pass pass:${PASSWORD} -pbkdf2 -provider legacy -provider default -P
 echo "password=${PASSWORD}"
